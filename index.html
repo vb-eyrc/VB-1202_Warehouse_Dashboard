@@ -173,13 +173,13 @@
                 
             for (var j = 0; j < jsonDataObject.length; j++) {
 
-                if( jsonDataObject[j].Dispatched !="YES" && jsonDataObject[j].Shipped !="YES" ){
+                if( jsonDataObject[j].Dispatched !="YES " && jsonDataObject[j].Shipped !="YES " ){
                   var marker = L.marker(L.latLng(parseFloat(jsonDataObject[j].Latitude), parseFloat(jsonDataObject[j].Longitude)), {icon: redIcon});
                   }
-                else if(jsonDataObject[j].Dispatched =="YES" && jsonDataObject[j].Shipped !="YES"){
+                else if(jsonDataObject[j].Dispatched =="YES " && jsonDataObject[j].Shipped !="YES "){
                   var marker = L.marker(L.latLng(parseFloat(jsonDataObject[j].Latitude), parseFloat(jsonDataObject[j].Longitude)), {icon: yellowIcon});
                   }
-                else if(jsonDataObject[j].Dispatched =="YES" && jsonDataObject[j].Shipped =="YES"){
+                else if(jsonDataObject[j].Dispatched =="YES " && jsonDataObject[j].Shipped =="YES "){
                   var marker = L.marker(L.latLng(parseFloat(jsonDataObject[j].Latitude), parseFloat(jsonDataObject[j].Longitude)), {icon: greenIcon});
                   }
 
